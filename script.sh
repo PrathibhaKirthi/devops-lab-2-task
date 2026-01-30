@@ -12,4 +12,12 @@ touch fol_1/1_1.txt fol_1/1_2.txt fol_1/1_3.txt
 # Create files in fol_2
 touch fol_2/2_1.txt fol_2/2_2.txt fol_2/2_3.txt
 
+# *_1.txt and *_3.txt → owner read/write only
+chmod 600 fol_1/1_1.txt fol_1/1_3.txt
+chmod 600 fol_2/2_1.txt fol_2/2_3.txt
 
+# *_2.txt → read/write/execute for everyone
+chmod 777 fol_1/1_2.txt
+chmod 777 fol_2/2_2.txt
+
+echo "Job completed"
